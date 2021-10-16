@@ -1,0 +1,107 @@
+> # **_Module 1: Explore core data concepts_** 
+
+- ### Define data
+    - Data is a collection of facts, such as numbers, descriptions and observations, used in decision making
+- ### What are the types of data
+	- Structured
+    - Semi-structured
+    - Unstructured
+- ### Define the 3 types of data
+	- Structured data: typically tabular residing in a relational db, made of same number of columns but an unrestricted number of rows
+	- Semi-structured data: not stored in relational db, formats include JSON (JavaScript Object Notation), key-value db stores and graph dbs
+	- Unstructured data: files that do not have specific structure such as audio & video files, binary data
+- ### How data is stored
+	- Structured data is typically stored in relational database such as Azure SQL db
+	- Semi-structured data is typically stored in services such as Azure Cosmo db
+	- Unstructured data can be stored by using Azure Blob storage
+- ### Define Key-Value  db stores
+	- It stores associated arrays where the Key is the unique identifier to retrieve a specific value. The Key can be a number, a string or even a JSON file. 
+	- The data in this db are stored as a single collection with no structure or relation between them.
+- ### Define Graph db
+	- Used to store and query information about complex relationships such as an organisational chart. It is made of nodes and edges. Nodes hold information about the objects and edges the relationships between them
+- ### What are the Azure access levels
+	- Read-only 
+        - Read-only: Can query data but cannot modify eg. Management team
+    - Read/Write
+        - Read/Write: Can query and modify data eg. Personnel recording data via apps
+    - Owner
+		- Owner: Full data access including managing security eg. Data analysts and managers
+- ### What are 2 broad categories of data processing solutions for relational dbs
+	- Analytical Systems
+	- Transaction processing systems
+- ### What is a transactional system
+	- It records transactions, which is a small, discreet unit of work
+	- Often referred to as Online Transactional Processing (OLTP)
+	- Often high volume
+	- To support fast processing, normalization is performed on the tables 
+        - eg. Splitting table out into main tables and reference tables
+	- Can cause queries to be more complex but allows the system to cache the info needed
+- ### What is an analytical system
+	- Designed to query data and gain a big picture view
+	- Capture raw data 
+	- Data is used to generate insights for business decisions
+	- Usual tasks consist of: 
+		- Data ingestion - capturing the raw data
+		- Data transformation/processing - Clean & format data, create aggregations
+		- Data querying
+		- Data visualization - present data in more intuitive ways
+- ### Characteristics of relational data
+	- Simple structure
+	- Data undergoes a normalization process split into narrow & well-defined tables
+	- Consists of many reference tables 
+	- Querying can be complex as it requires reassembling the information needed
+	- Can lead to expensive queries
+- ### Characteristics of non-relational data
+	- Enables the storage of data in a format more closely related to its original structure
+	- All relevant information are stored together thus querying is simple
+	- Increase in storage and maintenance complexity due to duplication of information
+- ### Describe transactional workloads
+	- Are inherently complex
+	- Implement locks on data when it is being updated preventing it from being read during such process
+	- In distributed databases the strict isolation is relax to an "eventual consistency" (not suitable for banking systems) eg. Shares, likes, social media comments
+	- Must adhere to the ACID properties 
+		- Atomicity 
+			- each transaction treated as a single unit which either succeeds or fails completely
+		- Consistency
+			- Data can only be table from one valid state to another
+			- It can never lose or create data that cannot be accounted for
+		- Isolation
+			- Ensures transactions are executed concurrently 
+			- Db should always be in the same state as if they were executed sequentially
+		- Durability
+			- Committed transactions are guaranteed even if there is a system failure
+- ### Describe analytical workloads
+	- Read-only systems
+	- Store historical data or business metrics
+	- Depend on transactional information
+- ### Differentiate data workloads
+
+- ### Describe batch data
+	- New data elements are collected into groups
+	- Groups are processed at a later  convenient time as a batch
+	- Can be scheduled during idle times such as overnight
+	- Time delay between data ingestion and getting the results
+	- All input data must be ready before a batch can be processed
+	- Data must be checked carefully as an occurrence of even small errors will halt the whole process
+	- A good use of batch loads are a mainframe system connections where vast amounts of data need to be transferred into an analysis system
+- ### Describe streaming data
+	- Data is processed as it arrives as individual pieces, meaning it is ingested in real time Eliminates the wait time 
+	- Beneficial for new & dynamic data that is generated on a continual basis
+	- Ideal for time-critical operations such as stock market tracking, gaming stats, etc that require real-time response
+- ### Differentiate between batch and streaming data
+	- Main difference
+        - way they handle data
+	- Other differences:
+		1) Data Scope:
+			- Batch - processes all the data in the dataset
+			- Streaming - access only to the most recent data received
+		2) Data Size:
+			- Batch - Suitable for handling large datasets efficiently
+			- Streaming - Intended for individual records or micro batches (a few records)
+		3) Performance:
+			- Batch - latency of a few hours
+			- Streaming - processing occurs immediately with latency in seconds
+				_Latency = the time it takes from data received to processed_
+		4) Analysis:
+			- Batch - able to perform complex analytics
+            - Streaming - able to perform simple response functions, aggregates or calcs such as rolling averages
