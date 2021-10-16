@@ -6,7 +6,7 @@
 
 > The questions are a combination from the Udemy course and what I thought would be good for me to know. While links to the Microsoft material is used and referenced here for this study guide, this is not an official Microsoft course {or anything approved by Microsoft really :sweat_smile: }
 
-> **_Disclaimer:_** Always follow the official exam material from Microsoft. BUT I hope this study helps a little. Best of Luck :finger_cross: xx
+> **_Disclaimer:_** Always follow the official exam material from Microsoft. BUT I hope this study helps a little. Best of Luck 🤞
 ### **Preparation for the DP-900 exam**
 
 **_The exam has 4 sections:_**
