@@ -1,0 +1,36 @@
+> # **_Module 3: Explore concepts of relational data_** 
+
+- ### Characteristics of relational data
+	- A data model made of collections of entities from the real world in the form of tables
+	- **_Entity_** = _a thing which information needs to be known or held_
+	- Tables are made of rows and columns
+	- Rows represent a single instance of an entity, table can contain any number
+	- Columns represent the properties of an entity, same across all rows
+- ### What is a primary key (PK)
+	- A unique identifier for each row in a table
+	- Can be made of 1 or more columns
+	- Can not be empty (NULL) 
+	- Can not be repeated
+- ### What is a foreign key (FK)
+	- A value that links to a primary key of another table
+	- Used to maintain relationships between tables
+	- Enables the identification & prevention of anomalies
+			
+- ### What are the Structure Query Language (SQL) commands 
+    - 
+- ### What is OLTP
+    -
+- ### Cases of where a relational database would be used
+    -
+- ### Define Tables
+    -
+- ### Define Views
+    -
+- ### Define Indexes
+    -
+- ### Relational workload platforms: On-premise vs Cloud - explain differences
+    -
+- ### Define IaaS
+    -
+- ### Define PaaS
+    -
