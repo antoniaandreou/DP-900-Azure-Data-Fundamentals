@@ -1,1 +1,22 @@
 > # **_Module 4: Explore concepts of non relational data_** 
+
+- ### Characteristics of non-relational data
+    - 
+- ### Cases of where a non-relational database would be used
+    -
+- ### Types of non-relational data
+    -
+- ### Describe semi-structure data
+    -
+- ### Describe unstructured data
+    -
+- ### What is NoSQL
+    -
+- ### What is key-value store
+    -
+- ### What is a document database
+    -
+- ### What is a column family database
+    -
+- ### What is a graph database
+    -
