@@ -10,7 +10,7 @@
 ### **Preparation for the DP-900 exam**
 
 **_The exam has 4 sections:_**
-1. [Explore core data concepts] (https://github.com/antoniaandreou/DP-900-Azure-Data-Fundamentals/tree/feature/-built-core-data-concepts/Section%201:%20Explore-Core-Data-Concepts)
+1. [Explore core data concepts](https://github.com/antoniaandreou/DP-900-Azure-Data-Fundamentals/tree/feature/-built-core-data-concepts/Section%201:%20Explore-Core-Data-Concepts)
 2. Explore relational data in Azure
 3. Explore non-relational data in Azure
 4. Explore modern data warehouse analytics in Azure
