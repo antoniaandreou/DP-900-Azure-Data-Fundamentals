@@ -15,22 +15,84 @@
 	- A value that links to a primary key of another table
 	- Used to maintain relationships between tables
 	- Enables the identification & prevention of anomalies
-			
+- ### Define **_normalization_**
+	- Splitting an entity into more than one table 			
 - ### What are the Structure Query Language (SQL) commands 
-    - 
-- ### What is OLTP
-    -
-- ### Cases of where a relational database would be used
-    -
+    - **CREATE TABLE** 
+	- **INSERT** = to store data in a table
+	- **UPDATE** = to modify data in a table
+	- **DELETE** = to remove rows from a table
+	- **SELECT** = to retrieve data from a table
+- ### What are OLTP applications
+    - _Online Transaction Processing_ focus on transaction-oriented tasks that process a very large number of transactions per minute
+- ### Cases of where a relational database would be used for OLTP applications
+    - Banking solutions
+	- Online retail applications
+	- Flight reservation systems
+	- Many online purchasing applications
 - ### Define Tables
-    -
+    - Can have 0 or more rows
+	- Fixed set of columns
+	- Can use PK and FK to define relationships between them
+	- Can use SQL to access data in the tables
+	- Tables make up a relational database
 - ### Define Views
-    -
+    - A virtual table based on a query
+	- Can query/filter a view just like a table
+	- Can be used to join tables together
+	- Suitable for regularly needed information
 - ### Define Indexes
-    -
-- ### Relational workload platforms: On-premise vs Cloud - explain differences
-    -
+    - Helps data search in a table 
+	- Indexes are per single column
+	- Column data copied and sorted
+	- Speeds up queries with a WHERE clause as eliminates the row-by-row look up
+	- Can have multiple indexes per table
+	- Disadvantages:
+		- Consume additional space
+		- Any change on its table, requires for the index to be updated
+		- Slower table changes
+		- Additional charges
+	- Preferable for indexes to be created based on columns that are modified infrequently
+- ### Define _Clustered_ Index
+	- Physically re-organise the table based on its index column
+	- Speeds up querying even further
+	- Only 1 clustered index per table
+- ### On-premise (+/-)
+	## +
+    - Ensures close control over the data
+	- Reliable & secure
+	- Lower operational expenditure
+	## -
+	- Higher capital expenditure
+		- Purchase of database software
+		- Maintain both hardware and software
+	- End-to-end management
+	- Scalability can be slow & costly
+- ### Cloud computing (+/-)
+	## +
+	- Improves scalability
+	- Improves agility
+	- Time and cost savings
+	- No capital expenses
+	- Regular data backups
+	- Instant provisioning
+	- Data can be stored at different regions
+	## -
+	- No peronal control of data security
+	- Higher operational expenditure
 - ### Define IaaS
-    -
+    - Infrastructure as a Service
+	- Fully user managed cloud operation
+	- Enable lift and shift between on-premise & cloud
+	- Achieved via virtual machines and networks
+		- Manual scaling of resources
+	- User has full responsibility over the software (purchase, running, maintenance)
+	- End-to-end database management without the capital expense of hardware
+	- Best for operating system-level access
 - ### Define PaaS
-    -
+    - Platform as a Service
+	- Hardware and software are managed by third party
+	- Automatic & quick scaling of resources
+	- Supports virtualized versions of all popular databases
+	- Some functional restrictions of the database due to security
+	- Operating system & hardware specifications might be unavailable
