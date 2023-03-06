@@ -1,0 +1,140 @@
+> # **_Module 4: Explore concepts of non relational data_** 
+
+- ### Characteristics of non-relational database
+    - Enables the quick data capture
+    - Useful for quick ingestion pipelines
+    - Stores data in its original state and format
+    - Flexible data storage
+    - Non-schema database
+    - Entities are self describing
+    - Entities have a unique key-value
+    - Best to search db on key-value or index (if supported)
+    - Searching on another field can be extremely time consuming
+        - Search every collention
+        - Search each entity in the collection
+        - Search every field in the entity
+- ### Cases of where a non-relational database would be used
+    - IoT _(Internet of Things)_ and telematics
+        - large amounts of data ingestions in frequent bursts
+    - Retail and marketing
+        - storage of catalogue data
+        - event sourcing, processing pipelines
+    - Gaming
+        - db needs to be super fast
+        - able to handle massive spikes
+    - Web and mobile applications
+        - Azure Cosmo db commonly used and is well suited for:
+            - modelling social interactions
+            - integrating with 3rd party services
+            - building rich personalized experiences
+- ### Types of non-relational data
+    - Semi-structured
+    - Unstructured 
+- ### Describe semi-structure data
+    - Data that contains fields
+    - Fields vary between entities
+    - Fields are defined on a need-by per-entity basis
+    - Entities can be stored as:
+        - JSON document per entity
+        - Avro
+        - ORC
+        - Parquet
+- ### What is JSON
+    - JavaScript Object Notation
+    - Format used by JavaScript to store data in memory
+    - Can be also used to read and write documents to/from files
+    - Enclosed in curly brackets ({entity})
+    - _field name: field value, another field: another value_
+    - Field value can be
+        - simple values
+        - subdocuments _({another JSON file})_
+        - multiple values held in _([arrays])_
+        - fixed values _"held in quotes",_
+- ### What is Avro
+    - Data organized into rows
+    - Each record has a header
+    - Each header describes the data structure in the record 
+    - Headers are stored in JSON
+    - Data is stored in binary information
+    - Very good for:
+        - compressing data
+        - minimizing storage
+        - minimizing network bandwidth
+- ### What is ORC
+    - Optimized Row Columnar
+    - Data organized into columns _(stripes of data)_
+    - Each stripe holds data for 1 or more columns
+    - For each column a stripe contains:
+        - index into the rows
+        - data for each row
+        - statistical information footer
+    - Optimized to read & write operations in Apache Hive
+        - Hive:
+            - data warehouse system
+            - fast data summarization
+            - fast data querying over very last datasets
+- ### What is Parquet
+    - Data organized into columns
+    - Data for each column stored together in the same row group
+    - Each row group contains 1 or more data chunks
+    - Files include metadata
+    - Metadata:
+        - describes rows in each chunk
+        - used to locate quickly the correct chunk of data for a given set of rows
+        - used to retrieve column data for this set of rows
+    - Efficient in storing & processing nested data types
+    - Efficient in compression & encoding schemes
+- ### Describe unstructured data
+    - Doesn't naturally contain fields
+    - Examples:
+        - Audio files
+        - Video files
+        - Other media files
+    - Amorphous blob of binary data
+    - Unable to search specific elements 
+    - Stored in block blobs _(blob = Binary Large Object)_ that support only basic read/write
+- ### What is NoSQL
+    - Means non-relational database
+    - 4 NoSQL categories
+        - key-value stores
+        - document databases
+        - column family databases
+        - graph databases
+- ### What is key-value store
+    - Simplest & quickest No SQL db for inserting & querying data
+    - Read and writes data very quickly
+    - Ideal for continual stream data ingestion that needs to be stored immediately
+    - Each data item has 2 elements:
+        - A key -_uniquely identifies item_
+        - A value -_holds value for item  as an unstructured block_
+    - Items stored in key order 
+    - Can not search on values
+    - Queries are key based
+    - Restricted to inserts and deletes  
+    - Eg. Azure Table or Table API in Cosmos db 
+- ### What is a document database
+    - Each document has a unique ID = **_document key_**
+    generated either:
+        - automatically by the db
+        - selecting a specific field
+    - Document fields are transparent to the db management system
+    - Document structures can vary **_+ great flexibility_**
+    - Able to query & filter data by
+        - using field values
+        - indexes of 1 or more fields
+    - Documents can be stored as:
+        - plain text
+        - JSON _(most popular)_
+        - XML
+        - YAML
+        - BSON
+    -Depending on the db system:
+        - in-place updates of specific fields **_- db fragmentation & reduced performance_**
+        - read & write entire document _(aka entire document replacement)_
+    - Large data ingestion **but NOT** as optimal as key-store dbs
+    - **Better** at querying data
+    - Azure Cosmos db through its _Core (SQL) API_
+- ### What is a column family database
+    - 
+- ### What is a graph database
+    -
