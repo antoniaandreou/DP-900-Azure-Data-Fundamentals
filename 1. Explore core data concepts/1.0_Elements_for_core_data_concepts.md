@@ -1,0 +1,14 @@
+**Describe ways to represent data**
+1 Describe features of structured data
+2 Describe features of semi-structured
+3 Describe features of unstructured data
+**Identify options for data storage**
+4 Describe common formats for data files
+5 Describe types of databases
+**Describe common data workloads**
+6 Describe features of transactional workloads
+7 Describe features of analytical workloads
+**Identify roles and responsibilities for data workloads**
+8 Describe responsibilities for database administrators
+9 Describe responsibilities for data engineers
+10 Describe responsibilities for data analysts
